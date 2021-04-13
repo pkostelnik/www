@@ -1,0 +1,190 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*fonts*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  src: local('Roboto'),
+    local('Roboto-Regular'),
+    url(/font/roboto/Roboto-Regular.eot),
+    url(/font/roboto/Roboto-Regular.woff2),
+    url(/font/roboto/Roboto-Regular.woff),
+    url(/font/roboto/Roboto-Regular.ttf);
+  font-display: swap;
+}
+
+/* Required height of parents of the Full Page Intro and Intro itself */
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+/* Navbar animation */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.navbar.scrolled {
+  background: rgb(68, 68, 68) !important;
+  /* IE */
+  background: rgba(0, 0, 0, 0.78) !important;
+  /* NON-IE */
+}
+
+.top-nav-collapse {
+  background-color: #1C2331;
+}
+
+/* responsive settings */
+@media (max-width: 559px) {
+
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 740px) {
+
+  html,
+  body,
+  header,
+  .view {
+    height: 700px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+
+  html,
+  body,
+  header,
+  .view {
+    height: 600px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #1C2331 !important;
+  }
+}
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1C2331;
+  }
+}
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #1C2331;
+}
+
+#time-counter {
+  font-size: 5rem;
+}
+
+/* spacing */
+.ml-6 {
+  margin-left: 6rem !important;
+}
+
+.mr-6 {
+  margin-right: 6rem !important;
+}
+
+.mt-6 {
+  margin-top: 6rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 6rem !important;
+}
+
+.mx-6 {
+  margin-left: 6rem !important;
+  margin-right: 6rem !important;
+}
+
+.my-6 {
+  margin-top: 6rem !important;
+  margin-bottom: 6rem !important;
+}
+
+.backpic {
+  background-image: url(/img/nightshade31920x1200.webp);
+}
+
+/* Navigationbar picture */
+#foto {
+  height: 21%;
+  width: 21%;
+  border-radius: 5px;
+}
+
+/* Button Rounded */
+.btn-rounded {
+  border-radius: 10px !important;
+}
+
+/* digital clock */
+#clock {
+  position: relative;
+  top: 1%;
+  right: 1%;
+  font-family: 'Roboto';
+  font-size: 1.5em;
+  color: #FFF;
+  letter-spacing: 7px;
+}
+
+/* coloring on mouseover */
+.btn-outline-white:hover {
+  color: yellowgreen !important;
+}
+
+.btn-primary:hover {
+  color: yellowgreen !important;
+}
+
+/* Footer left */
+#footer-left {
+  position: relative;
+}
+/* Freelancermap size */
+#freelancermap {
+  height: 30px;
+  width: 30px;
+}
+
+/* Youracclaim size */
+#youracclaim {
+  height: 30px;
+  width: 30px;
+}
+
+/* Flagsizes} */
+#flag {
+  height: 10%;
+  width: 10%;
+}
+
