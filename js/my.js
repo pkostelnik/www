@@ -27,6 +27,12 @@ $(function () {
 })
 
 /* sideloading */
+function lebenslauf_target() {
+  $.get('lebenslauf.html', function (data) {
+    $('#target').html(data);
+  })
+}
+
 function projekte_target() {
   $.get('projekte.html', function (data) {
     $('#target').html(data);
@@ -45,6 +51,11 @@ function cert_target() {
   })
 }
 
+function cv_target() {
+  $.get('cv.html', function (data) {
+    $('#target').html(data);
+  })
+}
 function projekte_en_target() {
   $.get('projekte_en.html', function (data) {
     $('#target').html(data);
