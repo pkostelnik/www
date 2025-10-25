@@ -130,6 +130,12 @@ header,
   margin-bottom: 6rem !important;
 }
 
+/* Prevent main sections with my-6 from creating extra scroll space */
+main.my-6 {
+  margin-bottom: 0 !important;
+  padding-bottom: 6rem;
+}
+
 .backpic {
   background-image: url(/img/nightshade31920x1200.webp);
 }
