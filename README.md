@@ -3,6 +3,11 @@
 Experimentelle Homepage für Pawel Kostelnik\
 [![Azure Static Web Apps CI/CD](https://github.com/pkostelnik/www/actions/workflows/azure-static-web-apps-gentle-pond-007985710.yml/badge.svg)](https://github.com/pkostelnik/www/actions/workflows/azure-static-web-apps-gentle-pond-007985710.yml)
 
+## Screenshot
+
+![Homepage Screenshot](img/screenshot-homepage.png)
+*Startseite der Portfolio-Website mit modernem Material Design*
+
 ## Tech Stack
 
 Diese Website wurde als persönliches Portfolio-Projekt mit modernen Frontend-Technologien erstellt:
