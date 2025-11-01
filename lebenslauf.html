@@ -49,7 +49,7 @@
       "@type": "Organization",
       "name": "Pawel Kostelnik",
       "url": "https://www.snat.tech",
-      "address": "Hansaring 19, 50670 Köln",
+      "address": "Burgstr. 39, 53859 Niederkassel",
       "sameAs": ["https://www.linkedin.com/in/pkostelnik/"]
     }
   </script>
@@ -87,14 +87,16 @@
   <link href="css/fabric.min.css" rel="stylesheet" />
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Material Design Bootstrap 
-  <link href="css/mdb.min.css" rel="stylesheet" /> -->
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet" />
   <!-- animate css -->
   <link href="css/animate.min.css" rel="stylesheet" />
   <!-- Normalize CSS -->
   <link href="css/addons/normalize.css" rel="stylesheet" />
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet" />
+  <!-- Lebenslauf specific styles -->
+  <link href="css/lebenslauf.css" rel="stylesheet" />
   <!-- Fonts -->
   <link rel="preload" href="font/roboto/Roboto-Regular.woff2" as="Font" crossorigin>
   <link rel="preload" href="font/roboto/Roboto-Light.woff2" as="Font" crossorigin>
@@ -153,7 +155,7 @@
 </nav>
 <!-- /Navigation -->
 
-<body id="target">
+<body class="backpic" id="target" onload="startTime()">
   <!-- Mainsite -->
 <div>
   
@@ -595,11 +597,11 @@
                     class="fab fa-xing-square fa-2x" data-toggle="tooltip" data-placement="top" title="Xing"></i></a>
               </td>
               <td class="px-1">
-                <a rel="noreferrer" href="https://mcp.microsoft.com/Anonymous/Transcript/Validate" target="_blank"><i
+                <a rel="noreferrer" href="https://learn.microsoft.com/de-de/users/pkostelnik/transcript/denejum55yn52qy" target="_blank"><i
                     class="fab fa-microsoft fa-2x" data-toggle="tooltip" data-placement="top" data-html="true"
-                    title="Microsoft Transcript: 1001375 Access Code: pawelkostelnik"></i></a>
+                    title="Microsoft Learn Transcript"></i></a>
               </td>
-              <td class="px-1">
+<!--              <td class="px-1">
                 <a rel="noreferrer" href="https://social.msdn.microsoft.com/profile/pawel%20kostelnik/"
                   target="_blank"><i class="fas fa-database fa-2x" data-toggle="tooltip" data-placement="top"
                     title="MSDN"></i></a>
@@ -610,16 +612,17 @@
                   target="_blank"><img id="freelancermap" src="img/freelancermap.webp" data-toggle="tooltip"
                     data-placement="top" title="Freelancermap"></img></a>
               </td>
-              <td class="px-1">
-                <a rel="noreferrer" href="https://www.youracclaim.com/user/pkostelnik" target="_blank"><img
+-->              <td class="px-1">
+                <a rel="noreferrer" href="https://www.credly.com/users/pkostelnik/badges" target="_blank"><img
                     id="youracclaim" src="img/youracclaim.webp" data-toggle="tooltip" data-placement="top"
-                    title="Youracclaim"></img></a>
+                    title="Credly"></img></a>
               </td>
             </tr>
           </table>
           <br>
-          <a rel="noreferrer" href="#impressum">&nbsp;Impressum&nbsp;</a>|&nbsp;<a rel="noreferrer"
-            href="#datenschutz">Datenschutz</a>
+          <a rel="noreferrer" href="#Impressum" data-toggle="modal"
+            data-target="#Impressum">&nbsp;Impressum</a>&nbsp;|&nbsp;<a rel="noreferrer" href="#datenschutz"
+            data-toggle="modal" data-target="#Datenschutz">Datenschutz</a><br>
         </div>
         <!-- Grid column -->
         <hr class="clearfix w-100 d-md-none pb-3">
@@ -629,10 +632,10 @@
           <h5 class="text-uppercase"><i class="fas fa-home mr-2"></i>Adresse:</h5>
           <ul class="list-unstyled disabled">
             <li>
-              Hansaring 19
+              Burgstr. 39
             </li>
             <li>
-              50670 K&ouml;ln
+              53859 Niederkassel
             </li>
             <li>
               Germany
@@ -678,6 +681,10 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Chart.js for circular charts -->
+  <script type="text/javascript" src="js/modules/chart.js"></script>
+  <!-- Lebenslauf specific JavaScript -->
+  <script type="text/javascript" src="js/lebenslauf.js"></script>
   <!-- My JScripts -->
   <script type="text/javascript" src="js/my.js"></script>
 
