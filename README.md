@@ -5,7 +5,7 @@ Experimentelle Homepage für Pawel Kostelnik\
 
 ## Screenshot
 
-![Homepage Screenshot](img/screenshot-homepage.png)
+![Homepage Screenshot](img/web_screenshot.png)
 *Startseite der Portfolio-Website mit modernem Material Design*
 
 ## Tech Stack
