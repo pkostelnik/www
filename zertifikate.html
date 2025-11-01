@@ -22,12 +22,11 @@
   <meta name="title" content="Persönliche Webseite von Pawel Kostelnik, Management Berater." />
   <meta name="author" content="Pawel Kostelnik" />
   <meta name="publisher" content="Pawel Kostelnik" />
-  <meta name="copyright" content="Pawel Kostelnik 2020" />
+  <meta name="copyright" content="Pawel Kostelnik 2021" />
   <meta name="revisit-after" content="after 20 days" />
-  <meta name="date" content="2020-08-28" />
+  <meta name="date" content="2021-06-16" />
   <meta name="expires" content="0" />
   <meta name="generator" content="Microsoft Visual Studio Code" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -106,7 +105,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
   <!-- Navbar brand -->
-  <div class="navbar-brand ml-3 disabled"><img id="foto" class="mr-3" src="/img/FastPassfoto.webp"
+  <div class="navbar-brand ml-3 disabled"><img id="foto" class="mr-3" src="img/FastPassfoto.webp"
       alt="Pawel Kostelnik 2015">Pawel Kostelnik</div>
   <!-- Collapse button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Snatnav" aria-controls="Snatnav"
@@ -685,10 +684,11 @@
               </td>
             </tr>
           </table>
-          <br>
-          <a rel="noreferrer" href="#Impressum" data-toggle="modal"
-            data-target="#Impressum">&nbsp;Impressum</a>&nbsp;|&nbsp;<a rel="noreferrer" href="#datenschutz"
-            data-toggle="modal" data-target="#Datenschutz">Datenschutz</a><br>
+          <div class="legal-links">
+            <a rel="noreferrer" href="#Impressum" data-toggle="modal"
+              data-target="#Impressum">Impressum</a>&nbsp;|&nbsp;<a rel="noreferrer" href="#datenschutz"
+              data-toggle="modal" data-target="#Datenschutz">Datenschutz</a>
+          </div>
         </div>
         <!-- Grid column -->
         <hr class="clearfix w-100 d-md-none pb-3">
@@ -739,7 +739,50 @@
   </footer>
   <!-- /Footer -->
   <!-- Javascript's  -->
-  <!-- JQuery -->
+  <!--impressum-->
+  <div class="modal fade" id="Impressum" tabindex="-1" role="dialog" aria-labelledby="myImpressum" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Impressum</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><i class="fa fa-address-card">&nbsp;</i> Pawel Kostelnik<br>
+            <i class="fa fa-home">&nbsp;</i> Burgstr. 39<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53859 Niederkassel
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NRW, Germany</p>
+        <p><i class="fa fa-phone">&nbsp;</i> Telefon: +49 (0) 176 48665492 <br>
+            <i class="fa fa-envelope">&nbsp;</i> E-Mail: pkostelnik(at)snat(dot)space</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Datenschutz-->
+  <div class="modal fade" id="Datenschutz" tabindex="-1" role="dialog" aria-labelledby="myDatenschutz" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Datenschutz</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Grundlegende Datenschutzinformationen finden Sie im Impressum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="js/popper.min.js"></script>

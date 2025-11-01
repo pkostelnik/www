@@ -97,6 +97,80 @@ header,
 /* Footer color for sake of consistency with Navbar */
 .page-footer {
   background-color: #1C2331;
+  color: #ffffff !important;
+}
+
+/* Footer Titel/Überschriften */
+.page-footer h5 {
+  color: #9acd32 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #9acd32;
+  padding-bottom: 0.5rem;
+}
+
+/* Footer Inhalte/Listen */
+.page-footer .list-unstyled li {
+  color: #e3f2fd !important;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.page-footer .list-unstyled a {
+  color: #e3f2fd !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.page-footer .list-unstyled a:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* Footer Social Media Links */
+.page-footer table a {
+  color: #e3f2fd !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.page-footer table a:hover {
+  color: #9acd32 !important;
+  transform: scale(1.1);
+}
+
+/* Footer Impressum/Datenschutz Links - besondere Hervorhebung */
+.page-footer .legal-links {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+}
+
+.page-footer .legal-links a {
+  color: #ffd54f !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.page-footer .legal-links a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(255, 213, 79, 0.5);
+}
+
+/* Icons im Footer */
+.page-footer .fas, .page-footer .fab {
+  color: #e3f2fd !important;
+  transition: all 0.3s ease;
+}
+
+.page-footer .fas:hover, .page-footer .fab:hover {
+  color: #9acd32 !important;
+  transform: scale(1.1);
 }
 
 #time-counter {
@@ -159,17 +233,111 @@ main.my-6 {
   right: 1%;
   font-family: 'Roboto';
   font-size: 1.5em;
-  color: #FFF;
+  color: #ffffff;
   letter-spacing: 7px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  font-weight: 500;
 }
 
-/* coloring on mouseover */
-.btn-outline-white:hover {
-  color: yellowgreen !important;
+/* coloring on mouseover - konsistent mit Navbar und Footer */
+.btn-primary {
+  background-color: #9acd32 !important;
+  border-color: #9acd32 !important;
+  color: #1C2331 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  color: yellowgreen !important;
+  background-color: #8bc34a !important;
+  border-color: #8bc34a !important;
+  color: #1C2331 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(154, 205, 50, 0.3);
+}
+
+.btn-primary:focus {
+  background-color: #8bc34a !important;
+  border-color: #8bc34a !important;
+  color: #1C2331 !important;
+  box-shadow: 0 0 0 0.2rem rgba(154, 205, 50, 0.25) !important;
+}
+
+.btn-primary:active {
+  background-color: #7cb342 !important;
+  border-color: #7cb342 !important;
+  color: #1C2331 !important;
+}
+
+/* Navbar improvements */
+.navbar-dark .navbar-brand {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #e3f2fd !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Navbar Buttons - konsistent mit Footer-Design */
+.btn-outline-white {
+  color: #e3f2fd !important;
+  border-color: #e3f2fd !important;
+  background-color: transparent !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+  color: #1C2331 !important;
+  background-color: #9acd32 !important;
+  border-color: #9acd32 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(154, 205, 50, 0.3);
+}
+
+.btn-outline-white:focus {
+  color: #1C2331 !important;
+  background-color: #9acd32 !important;
+  border-color: #9acd32 !important;
+  box-shadow: 0 0 0 0.2rem rgba(154, 205, 50, 0.25) !important;
+}
+
+.btn-outline-white:active {
+  color: #1C2331 !important;
+  background-color: #9acd32 !important;
+  border-color: #9acd32 !important;
+}
+
+/* Language Flag Styling */
+#flag {
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+#flag:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(154, 205, 50, 0.4);
+}
+
+/* Navbar Toggle Button */
+.navbar-toggler {
+  border-color: #e3f2fd !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(227, 242, 253, 0.25) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23e3f2fd' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 /* Footer left */
