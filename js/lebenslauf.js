@@ -33,13 +33,17 @@
                 return;
             }
 
-            var percent = chart.data('percent') || 0;
+            var percent = parseFloat(chart.data('percent'));
+            if (isNaN(percent)) {
+                percent = 0;
+            }
+            percent = Math.max(0, Math.min(100, percent));
             var barColor = chart.data('bar-color') || '#427AEB';
             var trackColor = chart.data('track-color') || '#EEEEEE';
 
             var svg = '<svg class="circular-chart" viewBox="0 0 36 36" role="presentation" aria-hidden="true">' +
                 '<path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke="' + trackColor + '" stroke-width="3.6" fill="none"/>' +
-                '<path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke="' + barColor + '" stroke-width="3.6" fill="none" stroke-dasharray="0, 100"/>' +
+                '<path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke="' + barColor + '" stroke-width="3.6" fill="none" stroke-dasharray="100" stroke-dashoffset="100"/>' +
                 '</svg>';
 
             chart.prepend(svg);
@@ -47,8 +51,11 @@
 
             setTimeout(function () {
                 chart.find('.circle')
-                    .css('transition', 'stroke-dasharray 1.3s ease-in-out')
-                    .attr('stroke-dasharray', percent + ', 100');
+                    .css({
+                        transition: 'stroke-dashoffset 1.3s ease-in-out',
+                        'will-change': 'stroke-dashoffset'
+                    })
+                    .attr('stroke-dashoffset', (100 - percent).toFixed(2));
             }, 500);
         });
     }
