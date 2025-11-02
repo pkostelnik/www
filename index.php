@@ -1,12 +1,13 @@
 <?php
-  if (!empty($_GET['q'])) {
-    switch ($_GET['q']) {
-      case 'info':
-        phpinfo(); 
-        exit;
-      break;
-    }
-  }
+  // Removed phpinfo() for security reasons
+  // if (!empty($_GET['q'])) {
+  //   switch ($_GET['q']) {
+  //     case 'info':
+  //       phpinfo(); 
+  //       exit;
+  //     break;
+  //   }
+  // }
 ?>
 <!DOCTYPE html>
 <html>

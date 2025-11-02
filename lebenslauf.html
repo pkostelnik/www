@@ -104,380 +104,395 @@
   <link rel="preload" href="font/themify/themify.woff" as="Font" crossorigin>
 </head>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
-  <!-- Navbar brand -->
-  <div class="navbar-brand ml-3 disabled"><img id="foto" class="mr-3" src="img/FastPassfoto.webp"
-      alt="Pawel Kostelnik 2015">Pawel Kostelnik</div>
-  <!-- Collapse button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Snatnav" aria-controls="Snatnav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <!-- Collapsible content -->
-  <div class="collapse navbar-collapse" id="Snatnav">
-    <!-- Links -->
-    <span id="language">
-      <img id="flag" class="ml-3" src="img/usa.webp" data-toggle="tooltip" data-placement="right"
-        title="change to english" onclick="language_target()"></img>
-    </span>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="home_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Start
-            <span class="sr-only">(current)</span></button>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a id="cv" class="nav-link" rel="noreferrer" href="#" onclick="lebenslauf_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Lebenslauf</button></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="projekte_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Projekte</button></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="portfolio_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Portfolio</button></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="cert_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Zertifikate</button></a>
-      </li>
-    </ul>
-  </div>
-  <!-- Collapsible content -->
-  <!-- timeclock -->
-  <div class="p-2">
-    <div id="clock" disabled></div>
-  </div>
-</nav>
-<!-- /Navigation -->
-
 <body class="backpic" id="target" onload="startTime()">
-  <!-- Mainsite -->
-<div>
-  
-        <!-- Section - Lebenslauf -->
-        <section id="Lebenslauf" class="section" data-scheme="light">
-
-            <!-- Section Content -->
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
+    <!-- Navbar brand -->
+    <div class="navbar-brand ml-3 disabled"><img id="foto" class="mr-3" src="img/FastPassfoto.png"
+        alt="Pawel Kostelnik 2015">Pawel Kostelnik</div>
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Snatnav" aria-controls="Snatnav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="Snatnav">
+      <!-- Links -->
+      <span id="language">
+    <img id="flag" class="ml-3" src="img/usa.png" data-toggle="tooltip" data-placement="right"
+          title="change to english" onclick="language_target()"></img>
+      </span>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" rel="noreferrer" href="#" onclick="home_target()"><button type="button"
+              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Start
+              <span class="sr-only">(current)</span></button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a id="cv" class="nav-link" rel="noreferrer" href="#" onclick="lebenslauf_target()"><button type="button"
+              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Lebenslauf</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="noreferrer" href="#" onclick="projekte_target()"><button type="button"
+              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Projekte</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="noreferrer" href="#" onclick="portfolio_target()"><button type="button"
+              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Portfolio</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="noreferrer" href="#" onclick="cert_target()"><button type="button"
+              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Zertifikate</button></a>
+        </li>
+      </ul>
+    </div>
+    <!-- Collapsible content -->
+    <!-- timeclock -->
+    <div class="p-2">
+      <div id="clock" disabled></div>
+    </div>
+  </nav>
+    <!-- /Navigation -->
+    <!-- Mainsite -->
+    <main class="resume-main">
+        <section id="Lebenslauf" class="section resume-section" data-scheme="light">
             <div class="section-content">
                 <div class="container-slim">
-                    <!-- Section Header -->
                     <div class="section-header">
                         <span class="section-header-indicator"></span>
                         <div class="section-header-content"><span class="typing">Hier finden Sie meine F&auml;higkeiten wie auch meinen Lebenslauf... </span></div>
                     </div>
-                    <!-- Lebenslauf - About -->
-                    <div class="resume-box">
-                        <p class="lead text-lg">Bereits seit mehr als 25 Jahren arbeite ich als Berater im Microsoft und VMware Umfeld.</p>
-                        <p class="lead mb-5">W&auml;hrend meiner Karriere habe ich in fast allen T&auml;tigkeiten für viele Kunden und Arbeitgeber gearbeitet. Vom kleinen IT-Unternehmen über Callcenter bis hin zu großen Konzernen. Aktuell erarbeite ich gerade Cloud, Linux
-                            &amp; Docker Kenntnisse.</p>
-                    </div>
-                    <!-- Lebenslauf - Skills -->
-                    <div class="resume-box image-edge row">
-                        <div class="col-md-8 push-md-4">
-                            <!-- Image -->
-                            <div class="image left">
-                                <img src="img/coffee.webp" alt="Kaffee Icon" class="animated" data-animation="fadeInLeft">
+
+                    <div class="resume-grid">
+                        <article class="resume-box glass-card resume-intro">
+                            <div class="resume-badges">
+                                <span class="resume-badge">25+ Jahre Erfahrung</span>
+                                <span class="resume-badge">Microsoft &amp; VMware Spezialist</span>
                             </div>
-                            <h5 class="mb-5">Skills &amp; F&auml;higkeiten</h5>
-                            <!-- Progress Bar -->
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                    <span>95%</span>
-                                </div>
+                            <h1 class="resume-title">Management Consultant &amp; Cloud Solution Architect</h1>
+                            <p class="lead text-lg mb-3">Bereits seit mehr als 25 Jahren arbeite ich als Berater im Microsoft und VMware Umfeld.</p>
+                            <p class="lead mb-0">W&auml;hrend meiner Karriere habe ich in fast allen T&auml;tigkeiten für viele Kunden und Arbeitgeber gearbeitet. Vom kleinen IT-Unternehmen über Callcenter bis hin zu großen Konzernen. Aktuell erarbeite ich gerade Cloud, Linux &amp; Docker Kenntnisse.</p>
+                            <div class="resume-actions">
+                                <a class="btn btn-primary btn-rounded" href="#" onclick="projekte_target()">Projekte ansehen</a>
+                                <a class="btn btn-outline-light btn-rounded" href="#" onclick="cert_target()">Zertifikate</a>
                             </div>
-                            <h6 class="mb-4">Widnows Server</h6>
-                            <!-- Progress Bar -->
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                    <span>80%</span>
+                        </article>
+
+                        <article class="resume-box glass-card resume-skills">
+                            <div class="row align-items-center gy-4">
+                                <div class="col-lg-4 order-lg-2 text-center">
+                                    <div class="resume-figure">
+                                        <img src="img/coffee.png" alt="Kaffee Icon" class="img-fluid animated" data-animation="fadeInLeft">
+                                    </div>
                                 </div>
-                            </div>
-                            <h6 class="mb-4">VMware VSpheare -> 6.5</h6>
-                            <!-- Progress Bar -->
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                    <span>90%</span>
-                                </div>
-                            </div>
-                            <h6 class="mb-4">Virualisierung</h6>
-                            <!-- Progress Bar -->
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <span>75%</span>
-                                </div>
-                            </div>
-                            <h6 class="mb-4">Windows Server Dienste (ADDS, DNS, DHCP usw.)</h6>
-                            <!-- Progress Bar -->
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                    <span>90%</span>
-                                </div>
-                            </div>
-                            <h6 class="mb-4">Microsoft Azure</h6>
-                            <!-- Progress Bar -->
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                    <span>90%</span>
-                                </div>
-                            </div>
-                            <h6 class="mb-4">Office &amp; Microsoft 365</h6>
-                            <!-- Progress Bar -->
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                    <span>90%</span>
-                                </div>
-                            </div>
-                            <h6 class="mb-4">Datenmigration (Mail, SQL, ADDS usw.)</h6>
-                            <!-- Progress Bar -->
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                    <span>70%</span>
-                                </div>
-                            </div>
-                            <h6 class="mb-4">Webentwicklung (HTML, CSS, Jscript, PHP)</h6>
-                        </div>
-                    </div>
-                    <!-- Resume - Education & Jobs -->
-                    <div class="resume-box image-edge text-center">
-                        <h5 class="mb-5">Arbeiten &amp; Bildung</h5>
-                        <div class="row">
-                            <div class="col-md-10 push-md-1">
-                                <!-- Image -->
-                                <div class="image left">
-                                    <img src="img/docs.webp" alt="Dokumente Icon" class="animated" data-animation="fadeInLeft">
-                                </div>
-                                <!-- Image -->
-                                <div class="image right">
-                                    <img src="img/glasses.webp" alt="Brille Icon" class="animated" data-animation="fadeInRight">
-                                </div>
-                                <!-- Timeline -->
-                                <div class="timeline">
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">05.2021 - </div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Customer Engineer</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                <u>Microsoft</u><br>
-                                                <ul>
-                                                    <li>Teams</li>
-                                                    <li>Voice</li>
-                                                    <li>Skype for Business</li>
-                                                </ul>
-                                            </span>
+                                <div class="col-lg-8 order-lg-1">
+                                    <h2 class="resume-subtitle">Skills &amp; F&auml;higkeiten</h2>
+                                    <div class="skill-grid">
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">Windows Server</span>
+                                                <span class="skill-value">95%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">VMware vSphere &rarr; 6.5</span>
+                                                <span class="skill-value">80%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">Virtualisierung</span>
+                                                <span class="skill-value">90%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">Windows Server Dienste (ADDS, DNS, DHCP)</span>
+                                                <span class="skill-value">75%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">Microsoft Azure</span>
+                                                <span class="skill-value">90%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">Office &amp; Microsoft 365</span>
+                                                <span class="skill-value">90%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">Datenmigration (Mail, SQL, ADDS)</span>
+                                                <span class="skill-value">90%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">Webentwicklung (HTML, CSS, JavaScript, PHP)</span>
+                                                <span class="skill-value">70%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <div class="skill-header">
+                                                <span class="skill-name">Generative KI</span>
+                                                <span class="skill-value">75%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">04.2021 - 05.2021</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Management Consultant (MCT)</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                <u>BMH Consulting</u><br>
-                                                </span>
-                                        </div>
-                                    </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">03.2021 - 03.2021</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Management Consultant (MCT)</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                <u>BMH Consulting <br> Lutz und Grub AG</u><br>
-                                                Trainer<br>
-                                                <ul>
-                                                    <li>Exchange Server Hybrid <br><i>MOC MS-203</i></li>
-                                                </ul></span>
-                                        </div>
-                                    </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">01.2021 - 03.2021</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Management Consultant</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                <u>BMH Consulting <br> Integrated Dynamics Engineering</u><br>
-                                                IT Multiprojektmanager<br>
-                                                <ul>
-                                                    <li>M365 Migration</li>
-                                                    <li>Internetzugang</li>
-                                                    <li>Telefonie</li>
-                                                </ul></span>
-                                        </div>
-                                    </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">12.2020 - 01.2021</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Management Consultant (MCT)</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                <u>BMH Consulting <br> Lutz und Grub AG</u><br>
-                                                Trainer<br>
-                                                <ul>
-                                                    <li>Exchange 2016 auf <br>Windows Server 2016 <br><i>MOC 70-345</i></li>
-                                                    <li>Exchange Server Hybrid <br><i>MOC MS-203</i></li>
-                                                </ul></span>
-                                        </div>
-                                    </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">03.2019 - 11.2020</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Management Consultant</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                <u>BMH Consulting <br> WDR Westdeutscher Rundfunk</u><br>
-                                                Technischer Projektleiter: <br>
-                                                <ul>
-                                                    <li>Office 365, EM+S<br></li>
-                                                    <li>Microsoft Teams<br></li>
-                                                    <li>Teams Roomsystem<br></li>
-                                                    <li>Nextcloud mit Talk<br></li>
-                                                    <li><u>System Engineer / Architekt:<br></u></li>
-                                                    <li>Skype for Business 2015,<br></li>
-                                                    <li>Remote Desktop Dienste<br></li>
-                                                    <li><u>Diverse technische und organisatorische<br>
-                                                    Beratungst&auml;tigkeiten</u></li>
-                                                </ul></span>
-                                        </div>
-                                    </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">11.2018 - 02.2019</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Management Consultant</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                <u>BMH Consulting <br> Financial Information technology services</u><br>
-                                                Senior Windows Server Administrator &amp; Engineer</span>
-                                        </div>
-                                    </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">11.2017 - 11.2018</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Management Consultant</h5>
-                                            <span class="timeline-event-caption text-muted"><u>BMH Consulting <br> Microsoft (FTC)</u><br>
-                                                Migration Engagement Lead<br>
-                                                Office 365 Mail &amp; File</span>
-                                        </div>
-                                    </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">09.2017 - 10.2017</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Weiterbildung &amp; Zertifizierung<br>
-                                                (ITIL V3 &amp; Prince2)</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                    <u>New Horizons Computer Learning Cernter Dortmund GmbH &amp; Co.KG</u></span>
-                                        </div>
-                                    </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">01.2013 - 02.2017</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Stellvertretender IT-Leiter</h5>
-                                            <span class="timeline-event-caption text-muted"><u>New Horizons Computer Learning Cernter Dortmund GmbH &amp; Co.KG</u><br>
-                                                Mentor f&uuml;r:<br>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="resume-box glass-card resume-experience">
+                            <div class="resume-illustrations">
+                                <img src="img/docs.png" alt="Dokumente Icon" class="resume-illustration resume-illustration-left animated" data-animation="fadeInLeft">
+                                <img src="img/glasses.png" alt="Brille Icon" class="resume-illustration resume-illustration-right animated" data-animation="fadeInRight">
+                            </div>
+                            <h2 class="resume-subtitle">Arbeiten &amp; Bildung</h2>
+                            <div class="timeline">
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">05.2021 - </div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Customer Engineer</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>Microsoft</u><br>
                                             <ul>
-                                                <li>Microsoft MCP &amp; MOS<br></li>
-                                                <li>VMware VCP<br></li>
-                                                <li>LPIC 1 &amp; LPIC 2</li>
-                                                <li>ITIL V3<br></li>
-                                                <li>Prince²<br></li>
+                                                <li>Teams</li>
+                                                <li>Voice</li>
+                                                <li>Skype for Business</li>
                                             </ul>
-                                            Weiterbildungsberater<br>
-                                            Pr&uuml;funngs &amp; Zertifizierungs Experte<br>
-                                            Microsoft System Engineer<br>
-                                            Microsoft System Architekt<br>
-                                            Microsoft L&ouml;sungsetwickler<br>
-                                            </span>
-                                        </div>
+                                        </span>
                                     </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">05.2012 - 01.2013</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Weiterbildung &amp; Zertifizierung<br>
-                                                (VCP5, MCTS, MCITP, MCSA, MCSE, CTT+)</h5>
-                                            <span class="timeline-event-caption text-muted">
-                                                    <u>New Horizons Computer Learning Cernter Dortmund GmbH &amp; Co.KG</u></span>
-                                        </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">04.2021 - 05.2021</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Management Consultant (MCT)</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>BMH Consulting</u><br>
+                                        </span>
                                     </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">02.2011 - 02.2012</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Service Engineer</h5>
-                                            <span class="timeline-event-caption text-muted"><u>Andele ITS GmbH</u></span>
-                                        </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">03.2021 - 03.2021</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Management Consultant (MCT)</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>BMH Consulting <br> Lutz und Grub AG</u><br>
+                                            Trainer
+                                            <ul>
+                                                <li>Exchange Server Hybrid <br><i>MOC MS-203</i></li>
+                                            </ul>
+                                        </span>
                                     </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">07.2010 - 11.2010</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Service Techniker</h5>
-                                            <span class="timeline-event-caption text-muted"><u>WT Systems IT-Service &amp; Logistic GmbH</u></span>
-                                        </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">01.2021 - 03.2021</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Management Consultant</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>BMH Consulting <br> Integrated Dynamics Engineering</u><br>
+                                            IT Multiprojektmanager
+                                            <ul>
+                                                <li>M365 Migration</li>
+                                                <li>Internetzugang</li>
+                                                <li>Telefonie</li>
+                                            </ul>
+                                        </span>
                                     </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">06.2008 - 11.2008</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">User Help Desk Engineer</h5>
-                                            <span class="timeline-event-caption text-muted"><u>Deutsche Post Customer Service Center GmbH</u></span>
-                                        </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">12.2020 - 01.2021</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Management Consultant (MCT)</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>BMH Consulting <br> Lutz und Grub AG</u><br>
+                                            Trainer
+                                            <ul>
+                                                <li>Exchange 2016 auf Windows Server 2016 <br><i>MOC 70-345</i></li>
+                                                <li>Exchange Server Hybrid <br><i>MOC MS-203</i></li>
+                                            </ul>
+                                        </span>
                                     </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">09.2005 - 09.2007</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Callcenter Agent</h5>
-                                            <span class="timeline-event-caption text-muted"><u>Arvato Direct Services GmbH</u></span>
-                                        </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">03.2019 - 11.2020</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Management Consultant</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>BMH Consulting <br> WDR Westdeutscher Rundfunk</u><br>
+                                            Technischer Projektleiter
+                                            <ul>
+                                                <li>Office 365, EM+S</li>
+                                                <li>Microsoft Teams</li>
+                                                <li>Teams Roomsystem</li>
+                                                <li>Nextcloud mit Talk</li>
+                                                <li><u>System Engineer / Architekt</u></li>
+                                                <li>Skype for Business 2015</li>
+                                                <li>Remote Desktop Dienste</li>
+                                                <li><u>Diverse technische und organisatorische Beratungst&auml;tigkeiten</u></li>
+                                            </ul>
+                                        </span>
                                     </div>
-                                    <!-- Timeline Event -->
-                                    <div class="timeline-event">
-                                        <div class="timeline-event-point"></div>
-                                        <div class="timeline-event-date">01.2005 - 07.2005</div>
-                                        <div class="timeline-event-content">
-                                            <h5 class="timeline-event-title">Berater</h5>
-                                            <span class="timeline-event-caption text-muted"><u>Vomicon GmbH</u><br>
-                                            System/Service Administrator/Engineer/Coach</span>
-                                        </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">11.2018 - 02.2019</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Management Consultant</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>BMH Consulting <br> Financial Information Technology Services</u><br>
+                                            Senior Windows Server Administrator &amp; Engineer
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">11.2017 - 11.2018</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Management Consultant</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>BMH Consulting <br> Microsoft (FTC)</u><br>
+                                            Migration Engagement Lead<br>
+                                            Office 365 Mail &amp; File
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">09.2017 - 10.2017</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Weiterbildung &amp; Zertifizierung (ITIL V3 &amp; Prince2)</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>New Horizons Computer Learning Center Dortmund GmbH &amp; Co.KG</u>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">01.2013 - 02.2017</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Stellvertretender IT-Leiter</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>New Horizons Computer Learning Center Dortmund GmbH &amp; Co.KG</u><br>
+                                            Mentor f&uuml;r
+                                            <ul>
+                                                <li>Microsoft MCP &amp; MOS</li>
+                                                <li>VMware VCP</li>
+                                                <li>LPIC 1 &amp; LPIC 2</li>
+                                                <li>ITIL V3</li>
+                                                <li>Prince²</li>
+                                            </ul>
+                                            Weiterbildungsberater, Pr&uuml;fungs- &amp; Zertifizierungs-Experte, Microsoft System Engineer &amp; Architekt, Microsoft L&ouml;sungsentwickler
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">05.2012 - 01.2013</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Weiterbildung &amp; Zertifizierung (VCP5, MCTS, MCITP, MCSA, MCSE, CTT+)</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>New Horizons Computer Learning Center Dortmund GmbH &amp; Co.KG</u>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">02.2011 - 02.2012</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Service Engineer</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>Andele ITS GmbH</u>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">07.2010 - 11.2010</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Service Techniker</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>WT Systems IT-Service &amp; Logistic GmbH</u>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">06.2008 - 11.2008</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">User Help Desk Engineer</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>Deutsche Post Customer Service Center GmbH</u>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">09.2005 - 09.2007</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Callcenter Agent</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>Arvato Direct Services GmbH</u>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="timeline-event-point"></div>
+                                    <div class="timeline-event-date">01.2005 - 07.2005</div>
+                                    <div class="timeline-event-content glass-card--inner">
+                                        <h5 class="timeline-event-title">Berater</h5>
+                                        <span class="timeline-event-caption">
+                                            <u>Vomicon GmbH</u><br>
+                                            System/Service Administrator/Engineer/Coach
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Resume - Languages -->
-                    <div class="resume-box image-edge row">
-                        <div class="col-md-7">
-                            <!-- Image -->
-                            <div class="image right">
-                                <img src="img/ipad.webp" alt="iPad Icon" class="animated" data-animation="fadeInRight">
-                            </div>
-                            <h5 class="mb-5">Spachkenntnisse</h5>
-                            <div class="row">
+                        </article>
+
+                        <article class="resume-box glass-card resume-languages">
+                            <h2 class="resume-subtitle">Sprachkenntnisse</h2>
+                            <div class="row g-4">
                                 <div class="col-sm-6">
-                                    <!-- Chart -->
                                     <div class="single-chart">
                                         <div class="chart" data-bar-color="#427AEB" data-track-color="#EEEEEE" data-percent="100">
                                             <div class="chart-content">
@@ -488,7 +503,6 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <!-- Chart -->
                                     <div class="single-chart">
                                         <div class="chart" data-bar-color="#D16CDD" data-track-color="#EEEEEE" data-percent="80">
                                             <div class="chart-content">
@@ -499,7 +513,6 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <!-- Chart -->
                                     <div class="single-chart">
                                         <div class="chart" data-bar-color="#D16CDD" data-track-color="#EEEEEE" data-percent="80">
                                             <div class="chart-content">
@@ -510,7 +523,6 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <!-- Chart -->
                                     <div class="single-chart">
                                         <div class="chart" data-bar-color="#427AEB" data-track-color="#EEEEEE" data-percent="20">
                                             <div class="chart-content">
@@ -521,60 +533,52 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Resume - Clients -->
-                    <div class="resume-box image-edge text-center">
-                        <h5 class="mb-5">Bisherige Arbeit- &amp; Auftraggeber</h5>
-                        <!-- Image -->
-                        <div class="image right">
-                            <img src="img/book.webp" alt="Buch Icon" class="animated" data-animation="fadeInRight">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10 push-md-1">
+                        </article>
+
+                        <article class="resume-box glass-card resume-clients text-center">
+                            <h2 class="resume-subtitle">Bisherige Arbeit- &amp; Auftraggeber</h2>
+                            <div class="resume-clients-grid">
                                 <ul class="spread-images">
                                     <li>
-                                        <a id="wdr" href="https://www.wdr.de" target="_blank" rel="noopener noreferrer nofollow"><img src="img/wdr_logo.svg" alt="WDR" class="gray-to-color bg-dark"></a>
+                                        <a id="wdr" href="https://www.wdr.de" target="_blank" rel="noopener noreferrer nofollow"><img src="img/wdr_logo.png" alt="WDR" class="gray-to-color bg-dark"></a>
                                     </li>
                                     <li>
-                                        <a id="fasttrack" href="https://fasttrack.microsoft.com/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/Microsoft.webp" alt="Microsoft" class="gray-to-color"></a>
+                                        <a id="fasttrack" href="https://fasttrack.microsoft.com/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/Microsoft.png" alt="Microsoft" class="gray-to-color"></a>
                                     </li>
                                     <li>
-                                        <a id="ide" href="https://ideworld.com/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/ide_logo.jpg" alt="IDE" class="gray-to-color"></a>
+                                        <a id="ide" href="https://ideworld.com/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/ide_logo_top.png" alt="IDE Integrated Dynamics Engineering" class="gray-to-color"></a>
                                     </li>
                                     <li>
-                                        <a id="newhorizons" href="https://newhorizons-dortmund.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/newhorizons.webp" alt="New Horizons" class="gray-to-color"></a>
+                                        <a id="newhorizons" href="https://newhorizons-dortmund.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/newhorizons.png" alt="New Horizons" class="gray-to-color"></a>
                                     </li>
                                 </ul>
                                 <div id="logotypes-more" class="collapse">
                                     <ul class="spread-images">
                                         <li>
-                                            <a id="LuGAG" href="https://www.lg-academy.de/de/" target="_blank" rel="noopener noreferrer nofollow"><img src="https://www.lg-academy.de/assets/images/9/lg-academy_logo-2b8ba189.png" alt="LG Academy" class="gray-to-color"></a>
+                                            <a id="LuGAG" href="https://www.lutzundgrub.de" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/lutzundgrub_logo.png" alt="Lutz &amp; Grub AG" class="gray-to-color"></a>
                                         </li>
                                         <li>
-                                            <a id="f-i-ts" href="https://f-i-ts.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/fits.webp" alt="f-i-ts GmbH" class="gray-to-color"></a>
+                                            <a id="f-i-ts" href="https://f-i-ts.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/fits.png" alt="f-i-ts GmbH" class="gray-to-color"></a>
                                         </li>
                                         <li>
-                                            <a id="andele" href="http://andele.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/andele_bottom.webp" alt="Andele GmbH" class="gray-to-color"></a>
+                                            <a id="andele" href="http://andele.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/andele_bottom.png" alt="Andele GmbH" class="gray-to-color"></a>
                                         </li>
                                         <li>
-                                            <a id="wtsystems" href="https://www.wtsystems.de" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/wtsystems_logo.webp" alt="WT Systems GmbH" class="gray-to-color"></a>
+                                            <a id="wtsystems" href="https://www.wtsystems.de" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/wtsystems_logo.png" alt="WT Systems GmbH" class="gray-to-color"></a>
                                         </li>
                                     </ul>
                                 </div>
-                                <button data-toggle="collapse" data-target="#logotypes-more" class="btn btn-toggle btn-grey btn-sm mt-4" aria-expanded="false">
+                            </div>
+                            <button data-bs-toggle="collapse" data-bs-target="#logotypes-more" class="btn btn-toggle btn-sm mt-4" aria-expanded="false">
                                 <span>mehr</span>
                                 <span>weniger</span>
                             </button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
-
         </section>
-
-</div>
+    </main>
   <!-- Footer -->
   <footer class="page-footer font-small elegant-color-dark pt-4 mt-4 fixed-bottom">
     <!-- Footer Links -->
@@ -608,12 +612,12 @@
               <td class="px-1">
                 <a rel="noreferrer"
                   href="https://www.freelancermap.de/freelancers-directory/freelancer-profiles/it-infrastructure/160440-profil-management-consultant.html"
-                  target="_blank"><img id="freelancermap" src="img/freelancermap.webp" data-toggle="tooltip"
+                  target="_blank"><img id="freelancermap" src="img/freelancermap.png" data-toggle="tooltip"
                     data-placement="top" title="Freelancermap"></img></a>
               </td>
 -->              <td class="px-1">
                 <a rel="noreferrer" href="https://www.credly.com/users/pkostelnik/badges" target="_blank"><img
-                    id="youracclaim" src="img/youracclaim.webp" data-toggle="tooltip" data-placement="top"
+                    id="youracclaim" src="img/youracclaim.png" data-toggle="tooltip" data-placement="top"
                     title="Credly"></img></a>
               </td>
             </tr>
@@ -729,7 +733,7 @@
   <!-- Lebenslauf specific JavaScript -->
   <script type="text/javascript" src="js/lebenslauf.js"></script>
   <!-- My JScripts -->
-  <script type="text/javascript" src="js/my.js"></script>
+    <script type="text/javascript" src="js/my.js"></script>
 
 </body>
 

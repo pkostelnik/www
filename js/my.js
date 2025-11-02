@@ -26,64 +26,99 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+function loadPartial(url, callback) {
+  $.ajax({
+    url: url,
+    dataType: 'html',
+    cache: false
+  }).done(function (data) {
+    var tempContainer = $('<div>');
+    tempContainer.append($.parseHTML(data, document, false));
+
+    var hostContainsNav = $('#target').find('nav.navbar').length > 0;
+    if (!hostContainsNav) {
+      tempContainer.find('nav.navbar').first().remove();
+    }
+
+    var bodyElement = tempContainer.find('body');
+    var contentSource = bodyElement.length ? bodyElement : tempContainer;
+
+    if (bodyElement.length && typeof bodyElement.attr('class') === 'string') {
+      $('#target').attr('class', bodyElement.attr('class'));
+    }
+
+    $('#target').html(contentSource.html());
+
+    reinitializeDynamicUi();
+
+    if (typeof callback === 'function') {
+      callback();
+    }
+
+    if (window.SecurityLogger && typeof SecurityLogger.logSecurityEvent === 'function') {
+      SecurityLogger.logSecurityEvent('ajax_load_success', { url: url });
+    }
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    console.error('Failed to load ' + url + ':', textStatus || errorThrown);
+    if (window.SecurityLogger && typeof SecurityLogger.logSecurityEvent === 'function') {
+      SecurityLogger.logSecurityEvent('ajax_load_failed', {
+        url: url,
+        status: textStatus,
+        error: errorThrown
+      });
+    }
+  });
+}
+
+function reinitializeDynamicUi() {
+  if ($.fn.tooltip) {
+    $('[data-toggle="tooltip"]').tooltip();
+  }
+  checkScroll();
+  if (typeof initializeLebenslaufPage === 'function' && $('#Lebenslauf').length) {
+    initializeLebenslaufPage();
+  }
+}
+
 /* sideloading */
 function lebenslauf_target() {
-  $.get('lebenslauf.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('lebenslauf.html');
 }
 
 function projekte_target() {
-  $.get('projekte.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('projekte.html');
 }
 
 function portfolio_target() {
-  $.get('portfolio.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('portfolio.html');
 }
 
 function cert_target() {
-  $.get('zertifikate.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('zertifikate.html');
 }
 
 function cv_target() {
-  $.get('cv.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('cv.html');
 }
+
 function projekte_en_target() {
-  $.get('projekte_en.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('projekte_en.html');
 }
 
 function portfolio_en_target() {
-  $.get('portfolio_en.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('portfolio_en.html');
 }
 
 function cert_en_target() {
-  $.get('zertifikate_en.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('zertifikate_en.html');
 }
 
 function home_target() {
-  $.get('index.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('index.html');
 }
 
 function language_target() {
-  $.get('index_en.html', function (data) {
-    $('#target').html(data);
-  })
+  loadPartial('index_en.html');
 }
 
 /* clock */
