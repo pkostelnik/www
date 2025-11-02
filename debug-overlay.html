@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Debug Test</title>
+    <style>
+        body { padding: 20px; background: #333; color: white; font-family: Arial; }
+        .test-card { background: white; color: black; padding: 20px; margin: 20px; border-radius: 10px; max-width: 300px; }
+        .test-card img { width: 100%; cursor: pointer; border-radius: 5px; }
+        .card-title { font-size: 18px; font-weight: bold; margin: 10px 0 5px 0; }
+        .card-text { font-size: 14px; color: #666; }
+        #debug { position: fixed; top: 10px; right: 10px; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div id="debug">Debug Info wird hier angezeigt...</div>
+    
+    <h1>Einfacher Certificate Overlay Test</h1>
+    
+    <div class="card test-card">
+        <div class="view overlay">
+            <img src="./img/Cert/w2ksp4b.webp" class="card-img-top" alt="Windows 2000 Zertifikat">
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Windows 2000 Server Spezialist</h4>
+            <p class="card-text">Microsoft Windows 2000 Server Specialist Zertifikat</p>
+        </div>
+    </div>
+    
+    <button onclick="testOverlayDirect()" style="padding: 10px; margin: 20px; background: #9acd32; border: none; border-radius: 5px; cursor: pointer;">
+        Direkter Overlay Test
+    </button>
+    
+    <script>
+        const debug = document.getElementById('debug');
+        
+        function log(message) {
+            console.log(message);
+            debug.innerHTML += message + '<br>';
+        }
+        
+        log('Page loaded');
+        
+        // Sehr einfache Overlay-Implementierung
+        function createSimpleOverlay() {
+            const overlay = document.createElement('div');
+            overlay.id = 'simpleOverlay';
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.9);
+                z-index: 9999;
+                display: none;
+                justify-content: center;
+                align-items: center;
+            `;
+            
+            overlay.innerHTML = `
+                <div style="position: relative; max-width: 90%; max-height: 90%;">
+                    <img id="overlayImg" src="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    <span onclick="closeSimpleOverlay()" style="position: absolute; top: -40px; right: 0; color: white; font-size: 30px; cursor: pointer; background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 50%;">&times;</span>
+                </div>
+            `;
+            
+            overlay.onclick = function(e) {
+                if (e.target === overlay) closeSimpleOverlay();
+            };
+            
+            document.body.appendChild(overlay);
+            log('Simple overlay created');
+        }
+        
+        function openSimpleOverlay(src) {
+            log('Opening overlay: ' + src);
+            const overlay = document.getElementById('simpleOverlay');
+            const img = document.getElementById('overlayImg');
+            if (overlay && img) {
+                img.src = src;
+                overlay.style.display = 'flex';
+                log('Overlay opened');
+            } else {
+                log('ERROR: Overlay elements not found');
+            }
+        }
+        
+        function closeSimpleOverlay() {
+            log('Closing overlay');
+            const overlay = document.getElementById('simpleOverlay');
+            if (overlay) {
+                overlay.style.display = 'none';
+                log('Overlay closed');
+            }
+        }
+        
+        function testOverlayDirect() {
+            openSimpleOverlay('./img/Cert/w2ksp4b.webp');
+        }
+        
+        // ESC key handler
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSimpleOverlay();
+            }
+        });
+        
+        // Initialize
+        createSimpleOverlay();
+        
+        // Setup image click
+        const img = document.querySelector('.card-img-top');
+        if (img) {
+            img.onclick = function() {
+                log('Image clicked: ' + img.src);
+                openSimpleOverlay(img.src);
+            };
+            log('Image click handler added');
+        } else {
+            log('ERROR: No image found');
+        }
+        
+        log('Setup complete');
+    </script>
+</body>
+</html>
