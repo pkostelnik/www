@@ -22,7 +22,7 @@
   <meta name="title" content="Personal website of Pawel Kostelnik, Management consultant." />
   <meta name="author" content="Pawel Kostelnik" />
   <meta name="publisher" content="Pawel Kostelnik" />
-  <meta name="copyright" content="Pawel Kostelnik 2021" />
+  <meta name="copyright" content="Pawel Kostelnik 2026" />
   <meta name="revisit-after" content="after 20 days" />
   <meta name="date" content="2021-06-16" />
   <meta name="expires" content="0" />
@@ -30,22 +30,23 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link rel="canonical" href="http://www.snat.tech/" />
-  <link rel="canonical" href="http://www.snat.space/" />
+  <link rel="canonical" href="https://www.snat.tech/" />
+  <link rel="alternate" hreflang="de" href="https://www.snat.tech/portfolio.html" />
+  <link rel="alternate" hreflang="en" href="https://www.snat.tech/portfolio_en.html" />
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Pawel Kostelnik" />
   <meta property="og:type" content="text/html" />
   <meta property="og:url" content="https://snat.tech/assets/img/web_screenshot.png" />
   <meta property="og:image" content="https://snat.tech/assets/img/web_screenshot.png" />
-  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:description"
     content="Profildarstellung von Pawel Kostelnik und den dazugehörigen Projekttätigkeiten." />
 
   <!-- Schema.org -->
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Pawel Kostelnik",
       "url": "https://www.snat.tech",
@@ -84,7 +85,6 @@
   <!-- Themify Icons -->
   <link href="css/themify-icons.css" rel="stylesheet" />
   <!-- Microsoft Fluent -->
-  <link href="css/fabric.min.css" rel="stylesheet" />
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <!-- Material Design Bootstrap -->
@@ -103,6 +103,7 @@
   <link rel="preload" href="font/themify/themify.woff" as="Font" crossorigin>
 </head>
 
+<body id="target">
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
   <!-- Navbar brand -->
@@ -118,30 +119,24 @@
     <!-- Links -->
     <span id="language">
       <img id="flag" class="ml-3" src="img/germany.webp" data-toggle="tooltip" data-placement="right"
-        title="wechsel zu deutsch" onclick="home_target()"></img>
+        title="wechsel zu deutsch" data-action="home_target">
     </span>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="home_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Start
-            <span class="sr-only">(current)</span></button>
-        </a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="home_target" role="button">Start
+            <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a id="cv" class="nav-link" rel="noreferrer" href="#" onclick="cv_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">CV</button></a>
+        <a id="cv" class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="cv_target" role="button">CV</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="projekte_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Projects</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="projekte_target" role="button">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="portfolio_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Portfolio</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="portfolio_target" role="button">Portfolio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="cert_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Certificates</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="cert_target" role="button">Certificates</a>
       </li>
     </ul>
   </div>
@@ -153,35 +148,101 @@
 </nav>
 <!-- /Navigation -->
 
-<body id="target">
-    <div>
-        <a rel="noreferrer" href="#!" class="btn btn-primary my-6" onclick="back_target()">zurück</a>
+  <!-- Mainsite -->
+  <main class="my-6">
+    <div class="container">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4">
+          <!--Card Projects-->
+          <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="./img/projektleitung_compressed.webp" class="card-img-top" alt="Technical Project Management">
+                <div class="mask rgba-white-slight"></div>
+            </div>
+            <!--Card content-->
+            <div class="card-body">
+              <!--Title-->
+              <h4 class="card-title">Technical / Project Management</h4>
+              <!--Text-->
+              <p class="card-text">Whether it's defining work packages or providing technical expertise on complex topics.</p>
+            </div>
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4">
+          <!--Card Portfolio-->
+          <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="./img/migration_compressed.webp" class="card-img-top" alt="Cloud Migration">
+                <div class="mask rgba-white-slight"></div>
+            </div>
+            <!--Card content-->
+            <div class="card-body">
+              <!--Title-->
+              <h4 class="card-title">Migration and Implementation of Cloud Services</h4>
+              <!--Text-->
+              <p class="card-text">Concept development, testing, documentation, migration execution, planning and more.</p>
+            </div>
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4">
+          <!--Card Projects-->
+          <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="./img/management_beratung_compressed.webp" class="card-img-top" alt="Management Consulting">
+                <div class="mask rgba-white-slight"></div>
+            </div>
+            <!--Card content-->
+            <div class="card-body">
+              <!--Title-->
+              <h4 class="card-title">Management Consulting</h4>
+              <!--Text-->
+              <p class="card-text">On topics such as service management, project management, programme management, strategy, technology, outsourcing and managed services.</p>
+            </div>
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4">
+          <!--Card Portfolio-->
+          <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="./img/andere_compressed.webp" class="card-img-top" alt="Various Activities">
+                <div class="mask rgba-white-slight"></div>
+            </div>
+            <!--Card content-->
+            <div class="card-body">
+              <!--Title-->
+              <h4 class="card-title">Various Other Activities</h4>
+              <!--Text-->
+              <p class="card-text">Whether in the Microsoft environment or on Linux basis (CentOS [RPM based], Ubuntu [DEB based]).<br>
+              Technical implementation based on customer requirements, solution consulting, support in solution development and more.</p>
+            </div>
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
     </div>
-    <div class="d-flex">
-        <p>
-            <h1 class="white">abc 1324567890 def</h1><br>
-        </p>
-    </div>
-    <div class="d-flex">
-        <p>
-            <h1 class="white">abc 1324567890 def</h1><br>
-        </p>
-    </div>
-    <div class="d-flex">
-        <p>
-            <h1 class="white">abc 1324567890 def</h1><br>
-        </p>
-    </div>
-    <div class="d-flex">
-        <p>
-            <h1 class="white">abc 1324567890 def</h1><br>
-        </p>
-    </div>
-    <div class="d-flex">
-        <p>
-            <h1 class="white">abc 1324567890 def</h1><br>
-        </p>
-    </div>
+  </main>
+  <!-- /Mainsite -->
   <!-- Footer -->
   <footer class="page-footer font-small elegant-color-dark pt-4 mt-4 fixed-bottom">
     <!-- Footer Links -->
@@ -216,12 +277,12 @@
                 <a rel="noreferrer"
                   href="https://www.freelancermap.de/freelancers-directory/freelancer-profiles/it-infrastructure/160440-profil-management-consultant.html"
                   target="_blank"><img id="freelancermap" src="img/freelancermap.webp" data-toggle="tooltip"
-                    data-placement="top" title="Freelancermap"></img></a>
+                    data-placement="top" title="Freelancermap"></a>
               </td>
 -->              <td class="px-1">
                 <a rel="noreferrer" href="https://www.credly.com/users/pkostelnik/badges" target="_blank"><img
                     id="youracclaim" src="img/youracclaim.webp" data-toggle="tooltip" data-placement="top"
-                    title="Credly"></img></a>
+                    title="Credly"></a>
               </td>
             </tr>
           </table>
@@ -255,13 +316,13 @@
           <h5 class="text-uppercase">Contact:</h5>
           <ul class="list-unstyled">
             <li>
-              <a rel="noreferrer" href="#!"><i class="fas fa-envelope mr-2"></i>pkostelnik@snat.space</a>
+              <a rel="noreferrer" href="mailto:pkostelnik@snat.space"><i class="fas fa-envelope mr-2"></i>pkostelnik@snat.space</a>
             </li>
             <li>
-              <a rel="noreferrer" href="#!"><i class="fas fa-phone-square mr-2"></i>+49 176 48665492</a>
+              <a rel="noreferrer" href="tel:+4917648665492"><i class="fas fa-phone-square mr-2"></i>+49 176 48665492</a>
             </li>
             <li>
-              <a rel="noreferrer" href="#!"><i class="fab fa-whatsapp-square mr-2"></i>+49 176 48665492</a>
+              <a rel="noreferrer" href="https://wa.me/4917648665492"><i class="fab fa-whatsapp-square mr-2"></i>+49 176 48665492</a>
             </li>
           </ul>
         </div>
@@ -271,7 +332,7 @@
     </div>
     <!-- Footer Links -->
     <!-- Copyright 
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <div class="footer-copyright text-center py-3">© 2026 Copyright:
     <a rel="noreferrer" href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
   </div>
    Copyright -->
@@ -283,7 +344,7 @@
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Imprint</h4>
+          <h4 class="modal-title w-100" id="myImpressum">Imprint</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body mx-3">
@@ -313,7 +374,7 @@
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Privacy Policy</h4>
+          <h4 class="modal-title w-100" id="myDatenschutz">Privacy Policy</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body mx-3">
@@ -352,6 +413,8 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- My JScripts -->
   <script type="text/javascript" src="js/my.js"></script>
+  <script type="text/javascript" src="js/security.js"></script>
+  <script type="text/javascript" src="js/monitoring.js"></script>
     <script>
         function back_target() {
           $.get('index.html', function (data) {

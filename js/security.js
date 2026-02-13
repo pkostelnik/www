@@ -82,6 +82,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // EN Projects navigation
+    const projectsEnNavs = document.querySelectorAll('[data-action="projekte_en_target"]');
+    projectsEnNavs.forEach(elem => {
+        elem.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (typeof projekte_en_target === 'function') {
+                projekte_en_target();
+            }
+        });
+    });
+    
+    // EN Portfolio navigation
+    const portfolioEnNavs = document.querySelectorAll('[data-action="portfolio_en_target"]');
+    portfolioEnNavs.forEach(elem => {
+        elem.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (typeof portfolio_en_target === 'function') {
+                portfolio_en_target();
+            }
+        });
+    });
+    
+    // EN Certificates navigation
+    const certEnNavs = document.querySelectorAll('[data-action="cert_en_target"]');
+    certEnNavs.forEach(elem => {
+        elem.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (typeof cert_en_target === 'function') {
+                cert_en_target();
+            }
+        });
+    });
+    
     // Back navigation
     const backNavs = document.querySelectorAll('[data-action="back_target"]');
     backNavs.forEach(elem => {

@@ -22,7 +22,7 @@
   <meta name="title" content="Persönliche Webseite von Pawel Kostelnik, IT-Management Berater." />
   <meta name="author" content="Pawel Kostelnik" />
   <meta name="publisher" content="Pawel Kostelnik" />
-  <meta name="copyright" content="Pawel Kostelnik 2021" />
+  <meta name="copyright" content="Pawel Kostelnik 2026" />
   <meta name="revisit-after" content="after 20 days" />
   <meta name="date" content="2021-06-16" />
   <meta name="expires" content="0" />
@@ -30,12 +30,14 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link rel="canonical" href="http://www.snat.tech/" />
+  <link rel="canonical" href="https://www.snat.tech/" />
+  <link rel="alternate" hreflang="de" href="https://www.snat.tech/index.html" />
+  <link rel="alternate" hreflang="en" href="https://www.snat.tech/index_en.html" />
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Pawel Kostelnik" />
-  <meta property="og:type" content="text/html" />
-  <meta property="og:url" content="https://snat.tech/assets/img/web_screenshot.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.snat.tech/" />
   <meta property="og:image" content="https://snat.tech/assets/img/web_screenshot.png" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:description"
@@ -44,7 +46,7 @@
   <!-- Schema.org -->
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Pawel Kostelnik",
       "url": "https://www.snat.tech",
@@ -83,7 +85,6 @@
   <!-- Themify Icons -->
   <link href="css/themify-icons.css" rel="stylesheet" />
   <!-- Microsoft Fluent -->
-  <link href="css/fabric.min.css" rel="stylesheet" />
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <!-- Material Design Bootstrap -->
@@ -102,6 +103,7 @@
   <link rel="preload" href="font/themify/themify.woff" as="Font" crossorigin>
 </head>
 
+<body class="backpic" id="target" onload="startTime()">
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
   <!-- Navbar brand -->
@@ -117,30 +119,24 @@
     <!-- Links -->
     <span id="language">
       <img id="flag" class="ml-3" src="img/usa.webp" data-toggle="tooltip" data-placement="right"
-        title="change to english" onclick="language_target()"></img>
+        title="change to english" data-action="language_target">
     </span>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="home_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Start
-            <span class="sr-only">(current)</span></button>
-        </a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="home_target" role="button">Start
+            <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a id="cv" class="nav-link" rel="noreferrer" href="#" onclick="lebenslauf_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Lebenslauf</button></a>
+        <a id="cv" class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="lebenslauf_target" role="button">Lebenslauf</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="projekte_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Projekte</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="projekte_target" role="button">Projekte</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="portfolio_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Portfolio</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="portfolio_target" role="button">Portfolio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="cert_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Zertifikate</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="cert_target" role="button">Zertifikate</a>
       </li>
     </ul>
   </div>
@@ -152,7 +148,6 @@
 </nav>
 <!-- /Navigation -->
 
-<body class="backpic" id="target" onload="startTime()">
   <!-- Mainsite -->
   <main class="my-6">
     <div class="container">
@@ -197,7 +192,7 @@
             <!--Card image-->
             <div class="view overlay">
               <img src="./img/projekte_compressed.webp" class="card-img-top" alt="Projekte Portfolio">
-              <a rel="noreferrer" href="#!" onclick="projekte_target()">
+              <a rel="noreferrer" href="#!" data-action="projekte_target">
                 <div class="mask rgba-white-slight"></div>
               </a>
             </div>
@@ -207,7 +202,7 @@
               <h4 class="card-title">Projekte</h4>
               <!--Text-->
               <p class="card-text">Eine &Uuml;bersicht meiner bisherigen Projekte.</p>
-              <!--<a rel="noreferrer" href="#!" class="btn btn-primary btn-rounded" onclick="projekte_target()">Button</a> -->
+              <!--<a rel="noreferrer" href="#!" class="btn btn-primary btn-rounded" data-action="projekte_target">Button</a> -->
             </div>
           </div>
           <!--/.Card-->
@@ -220,7 +215,7 @@
             <!--Card image-->
             <div class="view overlay">
               <img src="./img/portfolio_compressed.webp" class="card-img-top" alt="Portfolio Übersicht">
-              <a rel="noreferrer" href="#!" onclick="portfolio_target()">
+              <a rel="noreferrer" href="#!" data-action="portfolio_target">
                 <div class="mask rgba-white-slight"></div>
               </a>
             </div>
@@ -230,7 +225,7 @@
               <h4 class="card-title">Portfolio</h4>
               <!--Text-->
               <p class="card-text">Womit, oder wobei kann ich Ihnen helfen.</p>
-              <!--<a rel="noreferrer" href="#!" class="btn btn-primary btn-rounded" onclick="portfolio_target()">Button</a>-->
+              <!--<a rel="noreferrer" href="#!" class="btn btn-primary btn-rounded" data-action="portfolio_target">Button</a>-->
             </div>
           </div>
           <!--/.Card-->
@@ -243,7 +238,7 @@
             <!--Card image-->
             <div class="view overlay">
               <img src="./img/zertifikate_compressed.webp" class="card-img-top" alt="Zertifikate und Qualifikationen">
-              <a rel="noreferrer" href="#!" onclick="cert_target()">
+              <a rel="noreferrer" href="#!" data-action="cert_target">
                 <div class="mask rgba-white-slight"></div>
               </a>
             </div>
@@ -253,7 +248,7 @@
               <h4 class="card-title">Zertifikate</h4>
               <!--Text-->
               <p class="card-text">Was habe ich bisher Zertifiziert.</p>
-              <!--<a rel="noreferrer" href="#!" class="btn btn-primary btn-rounded" onclick="cert_target()">Button</a>-->
+              <!--<a rel="noreferrer" href="#!" class="btn btn-primary btn-rounded" data-action="cert_target">Button</a>-->
             </div>
           </div>
           <!--/.Card-->
@@ -298,12 +293,12 @@
                 <a rel="noreferrer"
                   href="https://www.freelancermap.de/freelancers-directory/freelancer-profiles/it-infrastructure/160440-profil-management-consultant.html"
                   target="_blank"><img id="freelancermap" src="img/freelancermap.webp" data-toggle="tooltip"
-                    data-placement="top" title="Freelancermap"></img></a>
+                    data-placement="top" title="Freelancermap"></a>
               </td>
 -->              <td class="px-1">
                 <a rel="noreferrer" href="https://www.credly.com/users/pkostelnik/badges" target="_blank"><img
                     id="youracclaim" src="img/youracclaim.webp" data-toggle="tooltip" data-placement="top"
-                    title="Credly"></img></a>
+                    title="Credly"></a>
               </td>
             </tr>
           </table>
@@ -338,13 +333,13 @@
           <h5 class="text-uppercase">Kontakt:</h5>
           <ul class="list-unstyled">
             <li>
-              <a rel="noreferrer" href="#!"><i class="fas fa-envelope mr-2"></i>pkostelnik@snat.space</a>
+              <a rel="noreferrer" href="mailto:pkostelnik@snat.space"><i class="fas fa-envelope mr-2"></i>pkostelnik@snat.space</a>
             </li>
             <li>
-              <a rel="noreferrer" href="#!"><i class="fas fa-phone-square mr-2"></i>+49 176 48665492</a>
+              <a rel="noreferrer" href="tel:+4917648665492"><i class="fas fa-phone-square mr-2"></i>+49 176 48665492</a>
             </li>
             <li>
-              <a rel="noreferrer" href="#!"><i class="fab fa-whatsapp-square mr-2"></i>+49 176 48665492</a>
+              <a rel="noreferrer" href="https://wa.me/4917648665492"><i class="fab fa-whatsapp-square mr-2"></i>+49 176 48665492</a>
             </li>
           </ul>
         </div>
@@ -354,7 +349,7 @@
     </div>
     <!-- Footer Links -->
     <!-- Copyright 
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <div class="footer-copyright text-center py-3">© 2026 Copyright:
     <a rel="noreferrer" href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
   </div>
    Copyright -->
@@ -372,13 +367,15 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- My JScripts -->
   <script type="text/javascript" src="js/my.js"></script>
+  <script type="text/javascript" src="js/security.js"></script>
+  <script type="text/javascript" src="js/monitoring.js"></script>
   <!-- Modals -->
   <!--impressum-->
   <div class="modal fade" id="Impressum" tabindex="-1" role="dialog" aria-labelledby="myImpressum" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Impressum</h4>
+          <h4 class="modal-title w-100" id="myImpressum">Impressum</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -424,7 +421,7 @@
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Datenschutz</h4>
+          <h4 class="modal-title w-100" id="myDatenschutz">Datenschutz</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -569,7 +566,7 @@
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Lebenslauf</h4>
+          <h4 class="modal-title w-100" id="mycv">Lebenslauf</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

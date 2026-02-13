@@ -20,7 +20,7 @@
   <meta name="title" content="Personal website of Pawel Kostelnik, Management Consultant." />
   <meta name="author" content="Pawel Kostelnik" />
   <meta name="publisher" content="Pawel Kostelnik" />
-  <meta name="copyright" content="Pawel Kostelnik 2021" />
+  <meta name="copyright" content="Pawel Kostelnik 2026" />
   <meta name="revisit-after" content="after 20 days" />
   <meta name="date" content="2021-06-16" />
   <meta name="expires" content="0" />
@@ -28,7 +28,9 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-  <link rel="canonical" href="http://www.snat.tech/" />
+  <link rel="canonical" href="https://www.snat.tech/" />
+  <link rel="alternate" hreflang="de" href="https://www.snat.tech/lebenslauf.html" />
+  <link rel="alternate" hreflang="en" href="https://www.snat.tech/cv.html" />
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Pawel Kostelnik" />
@@ -42,7 +44,7 @@
   <!-- Schema.org -->
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Pawel Kostelnik",
       "url": "https://www.snat.tech",
@@ -81,7 +83,6 @@
   <!-- Themify Icons -->
   <link href="css/themify-icons.css" rel="stylesheet" />
   <!-- Microsoft Fluent -->
-  <link href="css/fabric.min.css" rel="stylesheet" />
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <!-- Material Design Bootstrap -->
@@ -118,30 +119,24 @@
       <!-- Links -->
       <span id="language">
         <img id="flag" class="ml-3" src="img/germany.webp" data-toggle="tooltip" data-placement="right"
-          title="switch to German" onclick="lebenslauf_target()"></img>
+          title="switch to German" data-action="lebenslauf_target">
       </span>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" rel="noreferrer" href="#" onclick="home_target()"><button type="button"
-              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Start
-              <span class="sr-only">(current)</span></button>
-          </a>
+          <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="home_target" role="button">Start
+              <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a id="cv" class="nav-link" rel="noreferrer" href="#" onclick="cv_target()"><button type="button"
-              class="btn btn-outline-white btn-rounded btn-sm waves-effect">CV</button></a>
+          <a id="cv" class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="cv_target" role="button">CV</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" rel="noreferrer" href="#" onclick="projekte_en_target()"><button type="button"
-              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Projects</button></a>
+          <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="projekte_en_target" role="button">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" rel="noreferrer" href="#" onclick="portfolio_en_target()"><button type="button"
-              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Portfolio</button></a>
+          <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="portfolio_en_target" role="button">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" rel="noreferrer" href="#" onclick="cert_en_target()"><button type="button"
-              class="btn btn-outline-white btn-rounded btn-sm waves-effect">Certificates</button></a>
+          <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="cert_en_target" role="button">Certificates</a>
         </li>
       </ul>
     </div>
@@ -173,8 +168,8 @@
               <p class="lead text-lg mb-3">For more than 25 years I have worked as a consultant in the Microsoft and VMware ecosystem.</p>
               <p class="lead mb-0">Across my career I have supported customers and employers of every size &mdash; from small IT boutiques and call centers to large enterprises. I am currently deepening my expertise in cloud platforms, Linux, and Docker.</p>
               <div class="resume-actions">
-                <a class="btn btn-primary btn-rounded" href="#" onclick="projekte_en_target()">View projects</a>
-                <a class="btn btn-outline-light btn-rounded" href="#" onclick="cert_en_target()">Certificates</a>
+                <a class="btn btn-primary btn-rounded" href="#" data-action="projekte_en_target">View projects</a>
+                <a class="btn btn-outline-light btn-rounded" href="#" data-action="cert_en_target">Certificates</a>
               </div>
             </article>
 
@@ -560,7 +555,7 @@
                       <a id="f-i-ts" href="https://f-i-ts.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/fits.png" alt="f-i-ts GmbH" class="gray-to-color"></a>
                     </li>
                     <li>
-                      <a id="andele" href="http://andele.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/andele_bottom.png" alt="Andele GmbH" class="gray-to-color"></a>
+                      <a id="andele" href="https://andele.de/" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/andele_bottom.png" alt="Andele GmbH" class="gray-to-color"></a>
                     </li>
                     <li>
                       <a id="wtsystems" href="https://www.wtsystems.de" target="_blank" rel="noopener noreferrer nofollow"><img src="img/logo/wtsystems_logo.png" alt="WT Systems GmbH" class="gray-to-color"></a>
@@ -606,7 +601,7 @@
               <td class="px-1">
                 <a rel="noreferrer" href="https://www.credly.com/users/pkostelnik/badges" target="_blank"><img
                     id="youracclaim" src="img/youracclaim.png" data-toggle="tooltip" data-placement="top"
-                    title="Credly"></img></a>
+                    title="Credly"></a>
               </td>
             </tr>
           </table>
@@ -641,13 +636,13 @@
           <h5 class="text-uppercase">Contact:</h5>
           <ul class="list-unstyled">
             <li>
-              <a rel="noreferrer" href="#!"><i class="fas fa-envelope mr-2"></i>pkostelnik@snat.space</a>
+              <a rel="noreferrer" href="mailto:pkostelnik@snat.space"><i class="fas fa-envelope mr-2"></i>pkostelnik@snat.space</a>
             </li>
             <li>
-              <a rel="noreferrer" href="#!"><i class="fas fa-phone-square mr-2"></i>+49 176 48665492</a>
+              <a rel="noreferrer" href="tel:+4917648665492"><i class="fas fa-phone-square mr-2"></i>+49 176 48665492</a>
             </li>
             <li>
-              <a rel="noreferrer" href="#!"><i class="fab fa-whatsapp-square mr-2"></i>+49 176 48665492</a>
+              <a rel="noreferrer" href="https://wa.me/4917648665492"><i class="fab fa-whatsapp-square mr-2"></i>+49 176 48665492</a>
             </li>
           </ul>
         </div>
@@ -665,7 +660,7 @@
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Imprint</h4>
+          <h4 class="modal-title w-100" id="myImpressum">Imprint</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body mx-3">
@@ -694,7 +689,7 @@
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Privacy Policy</h4>
+          <h4 class="modal-title w-100" id="myDatenschutz">Privacy Policy</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body mx-3">
@@ -730,12 +725,12 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Chart.js for circular charts -->
-  <script type="text/javascript" src="js/modules/chart.js"></script>
   <!-- Resume specific JavaScript -->
   <script type="text/javascript" src="js/lebenslauf.js"></script>
   <!-- Core site JavaScript -->
   <script type="text/javascript" src="js/my.js"></script>
+  <script type="text/javascript" src="js/security.js"></script>
+  <script type="text/javascript" src="js/monitoring.js"></script>
 </body>
 
 </html>

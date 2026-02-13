@@ -22,7 +22,7 @@
   <meta name="title" content="Personal website of Pawel Kostelnik, Management consultant." />
   <meta name="author" content="Pawel Kostelnik" />
   <meta name="publisher" content="Pawel Kostelnik" />
-  <meta name="copyright" content="Pawel Kostelnik 2021" />
+  <meta name="copyright" content="Pawel Kostelnik 2026" />
   <meta name="revisit-after" content="after 20 days" />
   <meta name="date" content="2021-06-16" />
   <meta name="expires" content="0" />
@@ -30,22 +30,23 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link rel="canonical" href="http://www.snat.tech/" />
-  <link rel="canonical" href="http://www.snat.space/" />
+  <link rel="canonical" href="https://www.snat.tech/" />
+  <link rel="alternate" hreflang="de" href="https://www.snat.tech/zertifikate.html" />
+  <link rel="alternate" hreflang="en" href="https://www.snat.tech/zertifikate_en.html" />
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Pawel Kostelnik" />
   <meta property="og:type" content="text/html" />
   <meta property="og:url" content="https://snat.tech/assets/img/web_screenshot.png" />
   <meta property="og:image" content="https://snat.tech/assets/img/web_screenshot.png" />
-  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:description"
     content="Profildarstellung von Pawel Kostelnik und den dazugehörigen Projekttätigkeiten." />
 
   <!-- Schema.org -->
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Pawel Kostelnik",
       "url": "https://www.snat.tech",
@@ -84,7 +85,6 @@
   <!-- Themify Icons -->
   <link href="css/themify-icons.css" rel="stylesheet" />
   <!-- Microsoft Fluent -->
-  <link href="css/fabric.min.css" rel="stylesheet" />
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <!-- Material Design Bootstrap -->
@@ -103,6 +103,7 @@
   <link rel="preload" href="font/themify/themify.woff" as="Font" crossorigin>
 </head>
 
+<body id="target">
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top">
   <!-- Navbar brand -->
@@ -118,30 +119,24 @@
     <!-- Links -->
     <span id="language">
       <img id="flag" class="ml-3" src="img/germany.webp" data-toggle="tooltip" data-placement="right"
-        title="wechsel zu deutsch" onclick="home_target()"></img>
+        title="wechsel zu deutsch" data-action="home_target">
     </span>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="home_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Start
-            <span class="sr-only">(current)</span></button>
-        </a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="home_target" role="button">Start
+            <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a id="cv" class="nav-link" rel="noreferrer" href="#" onclick="cv_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">CV</button></a>
+        <a id="cv" class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="cv_target" role="button">CV</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="projekte_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Projects</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="projekte_target" role="button">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="portfolio_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Portfolio</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="portfolio_target" role="button">Portfolio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" rel="noreferrer" href="#" onclick="cert_target()"><button type="button"
-            class="btn btn-outline-white btn-rounded btn-sm waves-effect">Certificates</button></a>
+        <a class="nav-link btn btn-outline-white btn-rounded btn-sm waves-effect" rel="noreferrer" href="#" data-action="cert_target" role="button">Certificates</a>
       </li>
     </ul>
   </div>
@@ -153,7 +148,6 @@
 </nav>
 <!-- /Navigation -->
 
-<body id="target">
 <!-- Mainsite-->
 <main class="my-6">
   <div class="container">
@@ -649,7 +643,7 @@
             <td class="px-1">
               <a rel="noreferrer" href="https://www.credly.com/users/pkostelnik/badges" target="_blank"><img
                   id="youracclaim" src="img/youracclaim.webp" data-toggle="tooltip" data-placement="top"
-                  title="Credly"></img></a>
+                  title="Credly"></a>
             </td>
           </tr>
         </table>
@@ -684,13 +678,13 @@
         <h5 class="text-uppercase">Contact:</h5>
         <ul class="list-unstyled">
           <li>
-            <a rel="noreferrer" href="#!"><i class="fas fa-envelope mr-2"></i>pkostelnik@snat.space</a>
+            <a rel="noreferrer" href="mailto:pkostelnik@snat.space"><i class="fas fa-envelope mr-2"></i>pkostelnik@snat.space</a>
           </li>
           <li>
-            <a rel="noreferrer" href="#!"><i class="fas fa-phone-square mr-2"></i>+49 176 48665492</a>
+            <a rel="noreferrer" href="tel:+4917648665492"><i class="fas fa-phone-square mr-2"></i>+49 176 48665492</a>
           </li>
           <li>
-            <a rel="noreferrer" href="#!"><i class="fab fa-whatsapp-square mr-2"></i>+49 176 48665492</a>
+            <a rel="noreferrer" href="https://wa.me/4917648665492"><i class="fab fa-whatsapp-square mr-2"></i>+49 176 48665492</a>
           </li>
         </ul>
       </div>
@@ -708,7 +702,7 @@
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title w-100" id="myModalLabel">Imprint</h4>
+        <h4 class="modal-title w-100" id="myImpressum">Imprint</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body mx-3">
@@ -737,7 +731,7 @@
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title w-100" id="myModalLabel">Privacy Policy</h4>
+        <h4 class="modal-title w-100" id="myDatenschutz">Privacy Policy</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body mx-3">
@@ -775,6 +769,8 @@
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- My JScripts -->
 <script type="text/javascript" src="js/my.js"></script>
+  <script type="text/javascript" src="js/security.js"></script>
+  <script type="text/javascript" src="js/monitoring.js"></script>
 <!-- Certificate Overlay -->
 <script type="text/javascript" src="js/certificate-overlay.js"></script>
  
