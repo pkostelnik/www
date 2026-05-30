@@ -20,12 +20,15 @@
 
 ## 🚀 Features
 
-- 🌍 **Mehrsprachig** - Vollständige DE/EN Unterstützung
-- 📱 **Responsive Design** - Optimiert für alle Geräte
-- ⚡ **Interactive CV** - Animierte Timeline mit Skill-Diagrammen
-- 🎨 **Modern UI/UX** - Material Design 3.0 mit Glassmorphism
-- 🔍 **SEO-optimiert** - Strukturierte Daten und Performance
-- 🚀 **Progressive Web App** - Offline-fähig und installierbar
+- 🌍 **Mehrsprachig** – Vollständige DE/EN Unterstützung
+- 📱 **Responsive Design** – Optimiert für Mobile, Tablet & Desktop
+- ⚡ **Interactive CV** – Animierte Timeline mit Skill-Diagrammen
+- 🎨 **Modern UI/UX** – Material Design 3 mit Glassmorphism
+- 🔍 **SEO-optimiert** – Strukturierte Daten (schema.org) & sauberes Markup
+- ♿ **Accessibility** – Orientierung an [W3C WAI Tips](https://www.w3.org/WAI/tips/designing/)
+- 🔒 **Security Hardened** – CSP, HSTS, X-Frame-Options via `.htaccess` & `security.js`
+- 📈 **Self-hosted Monitoring** – Eigene `monitoring.js`, keine Drittanbieter-Tracker
+- 🏆 **Zertifikate-Overlay** – Interaktive Vorschau für Zertifikate
 
 ## 🛠️ Tech Stack
 
@@ -68,11 +71,12 @@ Masonry            Grid-Layout
 
 | Kategorie | Technologie | Beschreibung |
 |-----------|-------------|--------------|
-| 🏗️ **Architektur** | Multi-Page App | Separate HTML-Dateien für optimale Performance |
-| 🎯 **Core** | Vanilla JavaScript | Minimale Dependencies, maximale Performance |
-| 🎨 **Styling** | CSS3 + SASS | Moderne CSS-Features mit Preprocessor |
-| 📊 **Analytics** | Custom Implementation | Datenschutzkonformes Tracking |
-| 🔧 **Build** | Custom Scripts | Optimierte Asset-Pipeline |
+| 🏗️ **Architektur** | Multi-Page App (statisch) | Separate HTML-Dateien pro Sprache & Sektion |
+| 🎯 **Core** | Vanilla JavaScript + jQuery | Minimale Dependencies, maximale Performance |
+| 🎨 **Styling** | CSS3 + Custom Properties | Glassmorphism, keine Build-Pipeline nötig |
+| 📊 **Monitoring** | Eigenes `monitoring.js` | Datenschutzkonform, keine externen Tracker |
+| 🔐 **Security** | `security.js` + `.htaccess` | CSP, HSTS, X-Frame-Options, Referrer-Policy |
+| 🔧 **Build** | Keiner (Zero-Build) | Direkt deploybare statische Assets |
 
 ### ☁️ **Deployment & DevOps**
 
@@ -96,27 +100,43 @@ graph LR
 📦 Portfolio Website
 ┣ 📂 css/
 ┃ ┣ 🎨 style.css              # Haupt-Stylesheet
-┃ ┣ ✨ lebenslauf.css          # CV-spezifische Styles
-┃ ┣ 📱 bootstrap.min.css       # Responsive Framework
-┃ ┗ 🎭 mdb.min.css             # Material Design
+┃ ┣ ✨ lebenslauf.css         # CV-spezifische Styles
+┃ ┣ 📱 bootstrap.min.css      # Bootstrap 5.3.8
+┃ ┣ 🎭 mdb.min.css            # MDB UI Kit 9.3.0
+┃ ┣ 💫 animate.min.css        # Animate.css 4.1.0
+┃ ┣ 🧱 fabric.min.css         # Office UI Fabric 11.0.0
+┃ ┣ 🎨 themify-icons.css      # Themify Icon Set
+┃ ┣ 📂 fa/all.css             # Font Awesome 7.2.0
+┃ ┣ 📂 addons/normalize.css   # Normalize.css 8.0.1
+┃ ┗ 📂 webfonts/              # FA woff2-Fonts
 ┣ 📂 js/
-┃ ┣ ⚡ my.js                   # Custom JavaScript
-┃ ┣ 📊 lebenslauf.js           # CV Animationen
-┃ ┣ 🔒 security.js             # Security-Header & Schutz
-┃ ┣ 📈 monitoring.js           # Performance-Monitoring
-┃ ┣ 🏆 certificate-overlay.js  # Zertifikate-Overlay
-┃ ┗ 📚 jquery-3.7.1.min.js     # DOM Library
-┣ 📂 img/                      # Assets & Screenshots
+┃ ┣ ⚡ my.js                  # Custom JavaScript
+┃ ┣ 📊 lebenslauf.js          # CV-Animationen
+┃ ┣ 🔒 security.js            # Security-Layer
+┃ ┣ 📈 monitoring.js          # Performance-Monitoring
+┃ ┣ 🏆 certificate-overlay.js # Zertifikate-Overlay
+┃ ┣ 📱 bootstrap.min.js       # Bootstrap JS 5.3.8
+┃ ┣ 🎭 mdb.min.js             # MDB JS 9.3.0
+┃ ┣ 🧲 popper.min.js          # Popper.js
+┃ ┗ 📚 jquery-3.7.1.min.js    # jQuery 3.7.1
+┣ 📂 img/                     # Bilder & Screenshots
+┣ 📂 video/                   # Video-Assets
+┣ 📂 font/                    # Custom Webfonts
+┣ 📂 docs/                    # CV.pdf / Lebenslauf.pdf
+┣ 📂 .github/workflows/       # Azure Static Web Apps CI/CD
+┣ 🔐 .htaccess                # Security-Header (CSP, HSTS, …)
 ┣ 🌍 index.html               # Homepage (DE)
 ┣ 🌎 index_en.html            # Homepage (EN)
 ┣ 👨‍💼 lebenslauf.html          # CV (DE)
 ┣ 👔 cv.html                  # CV (EN)
 ┣ 💼 portfolio.html           # Portfolio (DE)
 ┣ 🎯 portfolio_en.html        # Portfolio (EN)
-┣ 🚀 projekte.html            # Projects (DE)
-┣ 📈 projekte_en.html         # Projects (EN)
-┣ 🏆 zertifikate.html         # Certificates (DE)
-┗ 🎖️ zertifikate_en.html      # Certificates (EN)
+┣ 🚀 projekte.html            # Projekte (DE)
+┣ 📈 projekte_en.html         # Projekte (EN)
+┣ 🏆 zertifikate.html         # Zertifikate (DE)
+┣ 🎖️ zertifikate_en.html      # Zertifikate (EN)
+┣ ✍️ sig.html                 # E-Mail-Signatur
+┗ 🛠️ debug-overlay.html       # Debug-Overlay
 ```
 
 ## 🌟 Highlights
@@ -141,12 +161,10 @@ graph LR
 ```bash
 # Repository klonen
 git clone https://github.com/pkostelnik/www.git
-
-# In Verzeichnis wechseln
 cd www
 
-# Mit lokalem Server öffnen
-python -m http.server 8000
+# Lokalen Server starten
+python3 -m http.server 8000
 # oder
 npx serve .
 
@@ -154,9 +172,23 @@ npx serve .
 open http://localhost:8000
 ```
 
+> **Kein Build-Schritt nötig** – die Seite ist eine reine statische Web-App.
+
+## 🔄 Maintenance
+
+Alle Vendor-Libraries liegen vorgebündelt im Repo (keine Paket-Manager). Aktualisierung erfolgt manuell:
+
+| Library | Quelle |
+|---|---|
+| Bootstrap | https://github.com/twbs/bootstrap/releases |
+| MDB UI Kit | https://github.com/mdbootstrap/mdb-ui-kit/releases |
+| jQuery | https://jquery.com/download/ |
+| Font Awesome | https://github.com/FortAwesome/Font-Awesome/releases |
+| Animate.css | https://github.com/animate-css/animate.css/releases |
+
 ## 📝 License
 
-Dieses Projekt steht unter der [MIT License](LICENSE) - siehe LICENSE Datei für Details.
+Dieses Projekt steht unter der [MIT License](LICENSE) – siehe LICENSE Datei für Details.
 
 ---
 
