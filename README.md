@@ -35,13 +35,14 @@
 
 ### 🎨 **Frontend & Styling**
 ```bash
-Bootstrap          5.0.0-alpha1
-Material Design    4.19.1 (MDB)
+Bootstrap          5.3.8
+MDB UI Kit         9.3.0 (Free)
 Animate.css        4.1.0
-Custom CSS         Glassmorphism
-Normalize.css      Cross-browser
-Font Awesome       5.13.1
+Normalize.css      8.0.1
+Font Awesome       7.2.0 (Free)
+Office UI Fabric   11.0.0
 Themify Icons      UI Elements
+Custom CSS         Glassmorphism
 ```
 
 </td>
@@ -49,13 +50,14 @@ Themify Icons      UI Elements
 
 ### ⚡ **JavaScript & Libraries**
 ```bash
-jQuery             3.5.1
+jQuery             3.7.1
+Bootstrap JS       5.3.8
+MDB JS             9.3.0
+Popper.js          Tooltips
 Chart.js           Visualisierung
 Moment.js          Zeit-Verarbeitung
 DataTables         Erweiterte Tabellen
 Masonry            Grid-Layout
-Popper.js          Tooltips
-Progress Bar       Animationen
 ```
 
 </td>
@@ -100,7 +102,10 @@ graph LR
 ┣ 📂 js/
 ┃ ┣ ⚡ my.js                   # Custom JavaScript
 ┃ ┣ 📊 lebenslauf.js           # CV Animationen
-┃ ┗ 📚 jquery-3.5.1.min.js    # DOM Library
+┃ ┣ 🔒 security.js             # Security-Header & Schutz
+┃ ┣ 📈 monitoring.js           # Performance-Monitoring
+┃ ┣ 🏆 certificate-overlay.js  # Zertifikate-Overlay
+┃ ┗ 📚 jquery-3.7.1.min.js     # DOM Library
 ┣ 📂 img/                      # Assets & Screenshots
 ┣ 🌍 index.html               # Homepage (DE)
 ┣ 🌎 index_en.html            # Homepage (EN)
